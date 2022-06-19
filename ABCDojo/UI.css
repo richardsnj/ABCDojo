@@ -1,0 +1,290 @@
+﻿* {
+	padding: 0;
+}
+
+body{
+	font-family:Dubai;
+	background-color:#CAA472;
+}
+.navbar {
+  	overflow: hidden;
+  	background-color: #383434;
+  	position:fixed;
+  	width: 99.2%;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-size: 49px;
+}
+li {
+	float: left;
+}
+.navbar a {
+	color:white;
+	float: left;
+	display: block;
+	font-size: 32px;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.navbar a:hover{
+	background-color: white;
+	color: black;
+	transition: all .5s ease-out;
+}
+.ABCDojoLogo{
+	float: left;
+	color: #D48F34;
+}
+.loginPage{
+	text-align:center;
+	font-size: 32px;
+}
+input[type=text], input[type=password], input[type=email], select {
+	border:2px solid gray;
+	border-radius:25px;
+	padding: 15px 100px;
+	margin: 5px 0 22px 0;
+	font-size: 15pt;
+	display: inline-block;
+} 
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+	border:2px solid black;
+}
+.butn {
+	font-size:20px;
+	border:2px solid black;
+	border-radius:25px;
+	cursor: pointer;
+	padding: 16px 20px;
+  	width: 20%;
+  	background: #CAA472;
+  	color:black;
+}
+.butn:hover{
+	background-color: black;
+	border-radius: 25px;
+	transition: all .5s ease-out;
+	color: #D48F34;
+}
+
+.RegisPage{
+	font-size: 32px;
+}
+
+.menu-btn{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+	transition: all .5s ease-in-out;
+	z-index: 2;
+}
+
+.menu-burger{
+	width: 50px;
+	height: 6px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px #fff;
+	transition: all .5s ease-in-out;
+	z-index: 2;
+	
+}
+
+.menu-burger::before,
+.menu-burger::after{
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 6px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px #fff;
+	transition: all .5s ease-in-out;
+	z-index: 2;
+}
+
+.menu-burger::before {
+	transform: translateY(-16px);
+	z-index: 2;
+}
+
+.menu-burger::after {
+	transform: translateY(16px);
+	z-index: 2;
+}
+
+.menu-btn.open .menu-burger{
+	transform: translateX(-50px);
+	background: transparent;
+	box-shadow: none;
+	z-index: 2;
+
+}
+
+.menu-btn.open .menu-burger::before{
+	transform: rotate(45deg) translate(35px, -35px);
+	z-index: 2;
+
+}
+
+.menu-btn.open .menu-burger::after{
+	transform: rotate(-45deg) translate(35px, 35px);
+	z-index: 2;
+
+}
+
+.nav-links {
+    position: fixed;
+    background: #383434;
+    height: 100vh;
+    width: 99.2%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+.nav-links.open {
+	clip-path: circle(1000px at 90% -25%);
+	-webkit-clip-path: circle(2058px at 90% -25%);
+	pointer-events: all;
+}
+
+.nav-links li {
+    opacity: 0;
+
+}
+.nav-links li a {
+font-size: 25px;
+}
+/*.nav-links li:nth-child(1) {
+transition: all 0.5s ease 0.2s;
+}
+.nav-links li:nth-child(2) {
+transition: all 0.5s ease 0.4s;
+
+}*/
+
+li.fade {
+opacity: 1;
+}
+
+.parentbox {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.childbox {
+	color: #D48F34;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	text-align:center;
+	flex: 0 0 300px;
+	margin: 10px;
+	padding: 10px;
+	height: 200px;
+	background-color: #383434;
+	border-radius: 10px;
+	border: 1px #cccccc solid;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buabthis {
+  display: flex;
+  flex-direction: column;
+}
+
+.abthis {
+  text-decoration: none;
+  padding: 20px 50px;
+  font-size: 1.25rem;
+  position: relative;
+  margin: 32px;
+}
+
+.btnabthis {
+  color: white;
+}
+
+.btnabthis::after,
+.btnabthis::before {
+  border: 3px solid white;
+  content: "";
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.btnabthis:hover::after {
+  transform: translate(-5px, -5px);
+}
+
+.btnabthis:hover::before {
+  transform: translate(5px, 5px);
+}
+
+.onmid{
+	position: absolute;
+	left:50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.btnlin{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: 2px solid black;
+	text-transform: uppercase;
+	padding: 12px 20px;
+	min-width: 200px;
+	margin: 10px;
+	cursor: pointer;
+	transition: color 0.4s linear;
+}
+
+.btnlin:hover{
+	color: white;
+}
+
+.btnlin::before{
+	content: "";
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 91%;
+	height: 70%;
+	background: black;
+	z-index: -1;
+	transition: transform 0.5s;
+	transform-origin: 0 0;
+	transform-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+
+.btnlin1::before{
+	transform: scaleX(0);
+}
+
+.btnlin1:hover::before{
+	transform: scaleX(1);
+}
+
